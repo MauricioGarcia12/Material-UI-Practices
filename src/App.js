@@ -1,42 +1,31 @@
 import React from 'react';
-import {Grid,Button} from '@material-ui/core'
-
+import FacebookIcon from '@material-ui/icons/Facebook';
+import { Button,IconButton } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 function App() {
   return (
     <div className="App">
-      <Button color='primary' variant='outlined'>
-        outlined
+
+      <FacebookIcon 
+      fontSize="large"
+      color='primary'
+      />
+      <Button
+        variant='contained'
+        color='secondary'
+        startIcon={<DeleteIcon/>}
+      >
+        Delete 
       </Button>
-      <br/>
-      <br/>
-      <Button color='primary' variant='contained'>
-        contained
-      </Button>
-      <br/>
-      <br/>
-      <Button color='primary' variant='contained' disableElevation>
-        disableElevation
-      </Button>
-      <br/>
-      <br/>
-      <Button color='primary' variant='contained' href='https://google.com'>
-        href
-      </Button>
-      <br/>
-      <br/>
-      <Button color='primary' variant='contained' fullWidth>
-        fullWidth
-      </Button>
-      <br/>
-      <br/>
-      <Button color='primary' variant='contained' size='small'>
-        size small
-      </Button>
-      <br/>
-      <br/>
-      <Button color='primary' variant='contained' size='medium'>
-        size medium
-      </Button>
+
+      <IconButton
+      aria-label='delete'
+      >
+        <DeleteIcon color='secondary'/>
+
+      </IconButton>
+
+
     </div>
   );
 }
